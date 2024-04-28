@@ -8,7 +8,7 @@ const product = require("./routes/products.js");
 // Initialization
 const PORT = 3000;
 const app = express();
-
+const DB = "Enter your mongoDB url";
 
 // Middleware
 app.use(express.json());
