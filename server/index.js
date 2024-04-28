@@ -8,7 +8,7 @@ const product = require("./routes/products.js");
 // Initialization
 const PORT = 3000;
 const app = express();
-const DB = "mongodb+srv://Qwerty:qwerty999@cluster0.quvxdms.mongodb.net/?retryWrites=true&w=majority";
+
 
 // Middleware
 app.use(express.json());
