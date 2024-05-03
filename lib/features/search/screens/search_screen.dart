@@ -31,6 +31,20 @@ class _SearchScreenState extends State<SearchScreen> {
     fetchSearchedProducts();
   }
 
+  double calcAvgRating(Product product){
+    double totalRating = 0;
+    double avgRating = 0;
+    for(int i=0; i<product.rating!.length; i++){
+      totalRating += product.rating![i].rating;
+    }
+
+    if(totalRating != 0){
+      avgRating = totalRating/product.rating!.length;
+    }
+    return avgRating;
+
+  }
+
   fetchSearchedProducts() async{
     products = await searchServices.fetchsearchedProducts(
       searchQuery: widget.searchQuery, 
@@ -41,6 +55,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(65),
@@ -163,7 +178,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(vertical: 3.0),
-                                  child: RatingStars(rating: 3,),
+                                  child: RatingStars(rating: calcAvgRating(products![index]),),
                                 ),
                                 Text(
                                   '\$${products![index].price.toString()}',
