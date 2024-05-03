@@ -9,7 +9,7 @@ const userRouter = require("./routes/user.js");
 // Initialization
 const PORT = 3000;
 const app = express();
-const DB = "Enter your mongoDB url";
+const DB = "mongodb+srv://Qwerty:qwerty999@cluster0.quvxdms.mongodb.net/?retryWrites=true&w=majority";
 
 // Middleware
 app.use(express.json());
