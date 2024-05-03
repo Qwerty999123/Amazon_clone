@@ -1,6 +1,9 @@
 # amazon_app
 
-A new Flutter project.
+If you want to run this app then make sure to check:
+- index.js in server folder
+- adminServices.dart in /lib/features/admin/services
+- global_variables.dart in /lib/constants folder
 
 ## Getting Started
 
