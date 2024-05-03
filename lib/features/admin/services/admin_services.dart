@@ -23,7 +23,7 @@ class AdminServices{
     List<String> imageUrl = [];
     final userProvider = Provider.of<UserProvider>(context, listen: false);
     try {
-      final cloudinary = CloudinaryPublic('drwyrkxzt', 'dkkwoiwt');
+      final cloudinary = CloudinaryPublic('', ''); // Enter your own cloudinary info
 
       for (int i = 0; i < images.length; i++) {
         CloudinaryResponse res = await cloudinary.uploadFile(
